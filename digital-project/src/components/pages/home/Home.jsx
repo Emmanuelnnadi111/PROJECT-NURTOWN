@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -14,24 +15,24 @@ const Home = () => {
           <nav className="">
             <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
               <li className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 ">
-                <a href="">MAIN</a>
+                <Link to="/">MAIN</Link>
               </li>
               <li>
-                <a href="">GALLERY</a>
+                <Link to="/gallery">GALLERY</Link>
               </li>
               <li>
-                <a href="">PROJECTS</a>
+                <Link to="/projects">PROJECTS</Link>
               </li>
               <li>
-                <a href="">CERTIFICATIONS</a>
+                <Link to="*">CERTIFICATIONS</Link>
               </li>
               <li>
-                <a href="">CONTACTS</a>
+                <Link to="*">CONTACTS</Link>
               </li>
             </ul>
             {/* Navbar mobile */}
             <div className="mobile-navbar hidden rounded-3xl p-6 bg-bgFooter  lg:hidden">
-              <ul className='flex flex-col gap-3 text-white'>
+              <ul className="flex flex-col gap-3 text-white">
                 <li>
                   <a href="">MAIN</a>
                 </li>

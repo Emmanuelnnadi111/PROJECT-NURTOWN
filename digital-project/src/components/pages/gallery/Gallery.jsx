@@ -4,6 +4,7 @@ const Gallery = () => {
   return (
     <div className="contain-gallery">
       {/* Nav-container */}
+
       <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
         <div className="contain-nav flex justify-between">
           <div className="logo">
@@ -54,6 +55,7 @@ const Gallery = () => {
           </button>
         </div>
       </header>
+
       {/* pictures */}
       <div className="gallery-contain">
         <div className="photos w-[80%] m-auto">

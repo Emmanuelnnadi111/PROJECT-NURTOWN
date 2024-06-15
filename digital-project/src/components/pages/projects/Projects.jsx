@@ -4,6 +4,7 @@ const Projects = () => {
   return (
     <div className="project-contain">
       {/* Nav-container */}
+
       <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
         <div className="contain-nav flex justify-between">
           <div className="logo">
@@ -54,6 +55,11 @@ const Projects = () => {
           </button>
         </div>
       </header>
+
+
+
+
+
       <div className="header w-[90%] lg:w-[80%] m-auto">
         <h1 className="text-Grey text-5xl sm:text-7xl font-light">Our</h1>
         <h1 className="text-5xl sm:text-7xl font-bold text-Gray1 text-start mb-5">

@@ -5,17 +5,22 @@ import Gallery from './components/pages/gallery/Gallery'
 import Projects from './components/pages/projects/Projects'
 import Certification from './components/pages/certifications/Certification'
 import Contact from './components/pages/contact/Contact'
-// import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-      <div>
-          {/* <Home /> */}
-          {/* <Gallery /> */}
-          <Projects />
-      </div>
+        <BrowserRouter>
+            <Routes>
+                <Route exact path='/' Component={Home}/>
+                <Route exact path='/gallery' Component={Gallery}/>
+                <Route exact path='/projects' Component={Projects}/>
+                <Route exact path='*' Component={Certification}/>
+                <Route exact path='*' Component={Contact}/>
+            </Routes>
+        </BrowserRouter>
+
   )
 }
 
