@@ -1,9 +1,26 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+
+   const navigate = useNavigate();
+   const goBack = () => {
+     navigate("/");
+   };  
+
+
+   const goGallry = () => {
+     navigate("/gallery");
+   };  
+   const goCert = () => {
+     navigate("*");
+   };  
+ 
+
   return (
     <div className="project-contain">
       {/* Nav-container */}
+
       <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
         <div className="contain-nav flex justify-between">
           <div className="logo">
@@ -12,19 +29,22 @@ const Projects = () => {
           {/* Navbar */}
           <nav className="">
             <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
-              <li className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 ">
+              <li
+                onClick={goBack}
+                className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 "
+              >
                 <a href="">MAIN</a>
               </li>
-              <li>
+              <li onClick={goGallry}>
                 <a href="">GALLERY</a>
               </li>
               <li>
                 <a href="">PROJECTS</a>
               </li>
-              <li>
+              <li onClick={goCert}>
                 <a href="">CERTIFICATIONS</a>
               </li>
-              <li>
+              <li onClick={goCert}>
                 <a href="">CONTACTS</a>
               </li>
             </ul>
@@ -54,6 +74,7 @@ const Projects = () => {
           </button>
         </div>
       </header>
+
       <div className="header w-[90%] lg:w-[80%] m-auto">
         <h1 className="text-Grey text-5xl sm:text-7xl font-light">Our</h1>
         <h1 className="text-5xl sm:text-7xl font-bold text-Gray1 text-start mb-5">

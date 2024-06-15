@@ -1,7 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 
 const Home = () => {
+
+  
   return (
     <div className="contain font-Roboto  lg:p-0">
       {/* Nav-container */}
@@ -14,24 +18,24 @@ const Home = () => {
           <nav className="">
             <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
               <li className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 ">
-                <a href="">MAIN</a>
+                <NavLink   to="/">MAIN </NavLink>
               </li>
               <li>
-                <a href="">GALLERY</a>
+                <NavLink to="/gallery">GALLERY</NavLink>
               </li>
               <li>
-                <a href="">PROJECTS</a>
+                <NavLink to="/projects">PROJECTS</NavLink>
               </li>
               <li>
-                <a href="">CERTIFICATIONS</a>
+                <Link to="*">CERTIFICATIONS</Link>
               </li>
               <li>
-                <a href="">CONTACTS</a>
+                <NavLink to="*">CONTACTS</NavLink>
               </li>
             </ul>
             {/* Navbar mobile */}
             <div className="mobile-navbar hidden rounded-3xl p-6 bg-bgFooter  lg:hidden">
-              <ul className='flex flex-col gap-3 text-white'>
+              <ul className="flex flex-col gap-3 text-white">
                 <li>
                   <a href="">MAIN</a>
                 </li>
@@ -50,7 +54,9 @@ const Home = () => {
               </ul>
             </div>
           </nav>
-          <button className="text-5xl  md:text-5xl lg:hidden">
+          <button onClick={() => {
+              document.getElementsByClassName('.btn').classList.toggle('hidden')
+          }} className="text-5xl btn  md:text-5xl lg:hidden">
             <i class="bx bx-menu"></i>
           </button>
         </div>

@@ -1,9 +1,24 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Gallery = () => {
+
+   const navigate = useNavigate();
+   const goBack = () => {
+     navigate('/');
+   };
+   const navProject = () => {
+      navigate('/projects')
+   }
+
+   const goCert = () => {
+     navigate("*");
+   };  
+
   return (
     <div className="contain-gallery">
       {/* Nav-container */}
+
       <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
         <div className="contain-nav flex justify-between">
           <div className="logo">
@@ -12,19 +27,22 @@ const Gallery = () => {
           {/* Navbar */}
           <nav className="">
             <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
-              <li className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 ">
+              <li
+                onClick={goBack}
+                className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 "
+              >
                 <a href="">MAIN</a>
               </li>
               <li>
                 <a href="">GALLERY</a>
               </li>
-              <li>
+              <li onClick={navProject}>
                 <a href="">PROJECTS</a>
               </li>
-              <li>
+              <li onClick={goCert}>
                 <a href="">CERTIFICATIONS</a>
               </li>
-              <li>
+              <li onClick={goCert}>
                 <a href="">CONTACTS</a>
               </li>
             </ul>
@@ -54,11 +72,12 @@ const Gallery = () => {
           </button>
         </div>
       </header>
+
       {/* pictures */}
       <div className="gallery-contain">
         <div className="photos w-[80%] m-auto">
-          <h1 className="text-Grey text-5xl sm:text-9xl font-light">Photo</h1>
-          <h1 className="text-5xl sm:text-9xl font-bold text-Gray1 text-start">
+          <h1 className="text-Grey text-5xl sm:text-7xl font-light">Photo</h1>
+          <h1 className="text-5xl sm:text-7xl font-bold text-Gray1 text-start">
             Gallery
           </h1>
           <div className="photosDisplay w-[100%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  mt-10 sm:py-20 gap-14">
