@@ -1,23 +1,23 @@
-import React from 'react'
-import { NavLink, useNavigate } from 'react-router-dom';
+import React from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Gallery = () => {
-    const openNav = () => {
-      document.querySelector(".mobile-navbar").classList.toggle("hidden");
-      // document.querySelector('.btn').classList.toggle('hidden')
-    };
+  const openNav = () => {
+    document.querySelector(".mobile-navbar").classList.toggle("hidden");
+    // document.querySelector('.btn').classList.toggle('hidden')
+  };
 
-   const navigate = useNavigate();
-   const goBack = () => {
-     navigate('/');
-   };
-   const navProject = () => {
-      navigate('/projects')
-   }
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate("/");
+  };
+  const navProject = () => {
+    navigate("/projects");
+  };
 
-   const goCert = () => {
-     navigate("*");
-   };  
+  const goCert = () => {
+    navigate("*");
+  };
 
   return (
     <div className="contain-gallery">
@@ -26,15 +26,13 @@ const Gallery = () => {
       <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
         <div className="contain-nav flex justify-between">
           <div className="logo">
-            <img src="./src/image/Group 11.png" alt="" className="w-30" />
+            <img src="./image/Group 11.png" alt="" className="w-30" />
           </div>
           {/* Navbar */}
           <nav className="">
             <ul className="hidden lg:flex justify-between ml-60 lg:w-[100%] pr-[10rem] text-offWhite">
-              <li
-                onClick={goBack}
-              >
-               <a href="">MAIN</a>
+              <li onClick={goBack}>
+                <a href="">MAIN</a>
               </li>
               <li>
                 <a href="">GALLERY</a>
@@ -93,56 +91,16 @@ const Gallery = () => {
             Gallery
           </h1>
           <div className="photosDisplay w-[100%] grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  mt-10 sm:py-20 gap-14">
-            <img
-              src="./src/image/Rectangle 22.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle23.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 24.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 25.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 26.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 27.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 28.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 29.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 30.png"
-              alt=""
-              className=" w-[100%]"
-            />
-            <img
-              src="./src/image/Rectangle 31.png"
-              alt=""
-              className=" w-[100%]"
-            />
+            <img src="./image/Rectangle 22.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle23.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 24.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 25.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 26.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 27.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 28.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 29.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 30.png" alt="" className=" w-[100%]" />
+            <img src="./image/Rectangle 31.png" alt="" className=" w-[100%]" />
           </div>
         </div>
       </div>
@@ -169,7 +127,7 @@ const Gallery = () => {
       <footer className="bg-bgFooter  py-10">
         <div className="contain-footer p-4 w-[100%] lg:w-[80%] m-auto flex flex-col lg:flex-row justify-between  text-white">
           <div className="w-[30%] lg:w-[10%]">
-            <img src="./src/image/Group 11 1.png" alt="" className="w-[100%]" />
+            <img src="./image/Group 11 1.png" alt="" className="w-[100%]" />
           </div>
 
           <div className="text-info flex flex-col gap-5 mt-10">
@@ -216,6 +174,6 @@ const Gallery = () => {
       </footer>
     </div>
   );
-}
+};
 
-export default Gallery
+export default Gallery;

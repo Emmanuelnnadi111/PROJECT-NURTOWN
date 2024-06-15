@@ -1,80 +1,56 @@
-import {React, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-
-
 const Home = () => {
-
   const activeList = () => {
-    document.querySelectorAll('.active')
-  }
-  const activeLink = "border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2";
-  const normalLink = ""
+    document.querySelectorAll(".active");
+  };
+  const activeLink =
+    "border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2";
+  const normalLink = "";
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   const openNav = () => {
-    document.querySelector(".mobile-navbar").classList.toggle("hidden")
+    document.querySelector(".mobile-navbar").classList.toggle("hidden");
     // document.querySelector('.btn').classList.toggle('hidden')
-  }
-  
+  };
+
   return (
     <div className="contain font-Roboto  lg:p-0">
       {/* Nav-container */}
       <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
         <div className="contain-nav flex justify-between">
           <div className="logo">
-            <img src="./src/image/Group 11.png" alt="" className="w-30" />
+            <img src="./image/Group 11.png" alt="" className="w-30" />
           </div>
           {/* Navbar */}
           <nav className="">
             <ul className="hidden lg:flex justify-between ml-60 lg:w-[100%]  pr-[10rem] text-offWhite">
-              <li className="active"
-                    onClick={() => {
-                    const activeList = document.querySelectorAll('.active')
-                    activeList.forEach(
-                      (lists) =>
-                        "border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2"
-                    );                   
-                     }}>
-                <NavLink
-                  to="/" 
-                >
-                  MAIN
-                </NavLink>
+              <li
+                className="active"
+                onClick={() => {
+                  const activeList = document.querySelectorAll(".active");
+                  activeList.forEach(
+                    (lists) =>
+                      "border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2"
+                  );
+                }}
+              >
+                <NavLink to="/">MAIN</NavLink>
               </li>
               <li className="active">
-                <NavLink
-                  to="/gallery"
-                 
-                >
-                  GALLERY
-                </NavLink>
+                <NavLink to="/gallery">GALLERY</NavLink>
               </li>
               <li className="">
-                <NavLink
-                  to="/projects"
-                 
-                >
-                  PROJECTS
-                </NavLink>
+                <NavLink to="/projects">PROJECTS</NavLink>
               </li>
               <li className="">
-                <NavLink
-                  to="*"
-                 
-                >
-                  CERTIFICATIONS
-                </NavLink>
+                <NavLink to="*">CERTIFICATIONS</NavLink>
               </li>
               <li className="active">
-                <NavLink
-                  to="*"
-                 
-                >
-                  CONTACTS
-                </NavLink>
+                <NavLink to="*">CONTACTS</NavLink>
               </li>
             </ul>
           </nav>
@@ -140,11 +116,7 @@ const Home = () => {
             </div>
           </div>
           <div className="first-section-image w-[100%] relative">
-            <img
-              src="./src/image/Rectangle 6.png"
-              alt=""
-              className="w-[100%]"
-            />
+            <img src="./image/Rectangle 6.png" alt="" className="w-[100%]" />
             <button className="bg-white tracking-extraWide p-6 pr-6 text-Gray1 text-xs absolute bottom-0 ">
               VIEW PROJECT <i class="bx bx-right-arrow-alt"></i>
             </button>
@@ -156,13 +128,9 @@ const Home = () => {
         <div className="wrap flex flex-col lg:flex-row w-[100%] lg:w-[85%] m-auto  lg:space-x-9 bg-sectionBg  ">
           <div className="wrap-image w-[100%] md:w-[90] m-auto lg:w-[40%]  ">
             <div className="image1 w-[100%]">
+              <img src="./image/Rectangle 8.png" alt="" className="w-[100%]" />
               <img
-                src="./src/image/Rectangle 8.png"
-                alt=""
-                className="w-[100%]"
-              />
-              <img
-                src="./src/image/Rectangle 10.png"
+                src="./image/Rectangle 10.png"
                 alt=""
                 className="w-[100%] mt-10"
               />
@@ -170,11 +138,7 @@ const Home = () => {
           </div>
           <div className="second-section-text w-[100%] mt-14 flex flex-col lg:flex-row lg:space-x-9 ">
             <div className="image2 w-[100%]  lg:w-[60%]">
-              <img
-                src="./src/image/Rectangle 9.png"
-                alt=""
-                className="w-[100%]"
-              />
+              <img src="./image/Rectangle 9.png" alt="" className="w-[100%]" />
             </div>
             <div className="w-[100%] lg:w-[90%]">
               <h1 className="text-Grey text-5xl  relative  lg:bottom-14 sm:text-7xl font-light">
@@ -202,14 +166,14 @@ const Home = () => {
         </h1>
         <div className="section w-[100%] lg:w-[80%] m-auto flex flex-col lg:flex-row py-20 ">
           <div className="sec1 flex space-x-3 lg:space-x-10 w-[100%]">
-            <img src="./src/image/1.png" alt="" className="w-[10%] h-32 " />
+            <img src="./image/1.png" alt="" className="w-[10%] h-32 " />
             <p className="text-2xl pr-0 sm:text-2xl sm:pr-60">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               efficitur, lectus et facilisis placerat.
             </p>
           </div>
           <div className="sec2 flex space-x-3 mt-5 lg:mt-0 lg:space-x-10 w-[100%] ">
-            <img src="./src/image/2.png" alt="" className="w-[10%] h-32 " />
+            <img src="./image/2.png" alt="" className="w-[10%] h-32 " />
             <p className="text-xl md:text-3xl lg:text-2xl pr-0 sm:pr-20">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               efficitur, lectus et facilisis placerat, magna mauris porttitor
@@ -226,11 +190,7 @@ const Home = () => {
           </h1>
           <div className="image-flex1  flex flex-col sm:flex-row gap-4 lg:space-x-5 w-[100%] mt-10 ">
             <div className="backdrop-image relative w-[100%]">
-              <img
-                src="./src/image/Rectangle 12.png"
-                alt=""
-                className="w-[100%]"
-              />
+              <img src="./image/Rectangle 12.png" alt="" className="w-[100%]" />
               <div className="backdrop bg-bgFooter w-full h-full absolute top-0 bg-opacity-50 p-10  ">
                 <div className="">
                   <h1 className="text-2xl sm:text-6xl  text-white">Sample</h1>
@@ -243,22 +203,22 @@ const Home = () => {
             </div>
 
             <div className="w-[100%]">
-              <img src="./src/image/image 15.png" alt="" className="w-[100%]" />
+              <img src="./image/image 15.png" alt="" className="w-[100%]" />
             </div>
           </div>
           <div className="image-flex2 flex flex-col gap-5  sm:flex-row lg:space-x-5 mt-10 w-[100%]">
             <img
-              src="./src/image/image 16.png"
+              src="./image/image 16.png"
               alt=""
               className="w-[100%] md:w-[35%] lg:w-[50%]"
             />
             <img
-              src="./src/image/image 17.png"
+              src="./image/image 17.png"
               alt=""
               className="w-[100%] md:w-[30%] lg:w-[90%]"
             />
             <img
-              src="./src/image/image 18.png"
+              src="./image/image 18.png"
               alt=""
               className="w-[100%] md:w-[30%] lg:w-[60%]"
             />
@@ -313,7 +273,7 @@ const Home = () => {
             </div>
             <div className="form-image w-[100%]">
               <img
-                src="./src/image/image 12.png"
+                src="./image/image 12.png"
                 alt=""
                 className="w-[100%] h-full "
               />
@@ -328,7 +288,7 @@ const Home = () => {
       <footer className="bg-bgFooter  py-10">
         <div className="contain-footer p-4 w-[100%] lg:w-[80%] m-auto flex flex-col lg:flex-row justify-between  text-white">
           <div className="w-[30%] lg:w-[10%]">
-            <img src="./src/image/Group 11 1.png" alt="" className="w-[100%]" />
+            <img src="./image/Group 11 1.png" alt="" className="w-[100%]" />
           </div>
 
           <div className="text-info flex flex-col gap-5 mt-10">
@@ -375,7 +335,6 @@ const Home = () => {
       </footer>
     </div>
   );
+};
 
-}
-
-export default Home
+export default Home;
