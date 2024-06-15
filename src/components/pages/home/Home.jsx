@@ -1,10 +1,23 @@
-import React from 'react'
+import {React, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 
 
+
 const Home = () => {
 
+  const activeList = () => {
+    document.querySelectorAll('.active')
+  }
+  const activeLink = "border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2";
+  const normalLink = ""
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const openNav = () => {
+    document.querySelector(".mobile-navbar").classList.toggle("hidden")
+    // document.querySelector('.btn').classList.toggle('hidden')
+  }
   
   return (
     <div className="contain font-Roboto  lg:p-0">
@@ -16,51 +29,87 @@ const Home = () => {
           </div>
           {/* Navbar */}
           <nav className="">
-            <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
-              <li className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 ">
-                <NavLink   to="/">MAIN </NavLink>
+            <ul className="hidden lg:flex justify-between ml-60 lg:w-[100%]  pr-[10rem] text-offWhite">
+              <li className="active"
+                    onClick={() => {
+                    const activeList = document.querySelectorAll('.active')
+                    activeList.forEach(
+                      (lists) =>
+                        "border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2"
+                    );                   
+                     }}>
+                <NavLink
+                  to="/" 
+                >
+                  MAIN
+                </NavLink>
               </li>
-              <li>
-                <NavLink to="/gallery">GALLERY</NavLink>
+              <li className="active">
+                <NavLink
+                  to="/gallery"
+                 
+                >
+                  GALLERY
+                </NavLink>
               </li>
-              <li>
-                <NavLink to="/projects">PROJECTS</NavLink>
+              <li className="">
+                <NavLink
+                  to="/projects"
+                 
+                >
+                  PROJECTS
+                </NavLink>
               </li>
-              <li>
-                <Link to="*">CERTIFICATIONS</Link>
+              <li className="">
+                <NavLink
+                  to="*"
+                 
+                >
+                  CERTIFICATIONS
+                </NavLink>
               </li>
-              <li>
-                <NavLink to="*">CONTACTS</NavLink>
+              <li className="active">
+                <NavLink
+                  to="*"
+                 
+                >
+                  CONTACTS
+                </NavLink>
               </li>
             </ul>
-            {/* Navbar mobile */}
-            <div className="mobile-navbar hidden rounded-3xl p-6 bg-bgFooter  lg:hidden">
-              <ul className="flex flex-col gap-3 text-white">
-                <li>
-                  <a href="">MAIN</a>
-                </li>
-                <li>
-                  <a href="">GALLERY</a>
-                </li>
-                <li>
-                  <a href="">PROJECTS</a>
-                </li>
-                <li>
-                  <a href="">CERTIFICATIONS</a>
-                </li>
-                <li>
-                  <a href="">CONTACTS</a>
-                </li>
-              </ul>
-            </div>
           </nav>
-          <button onClick={() => {
-              document.getElementsByClassName('.btn').classList.toggle('hidden')
-          }} className="text-5xl btn  md:text-5xl lg:hidden">
-            <i class="bx bx-menu"></i>
-          </button>
+          <div className="">
+            <button
+              onClick={openNav}
+              className="text-5xl  btn items-end   md:text-5xl lg:hidden"
+            >
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
         </div>
       </header>
+      {/* Navbar mobile */}
+      <div className="">
+        <div className="mobile-navbar hidden relative left-32 md:left-[65%]  w-60 rounded-3xl p-6 bg-bgFooter  lg:hidden">
+          <ul className="flex flex-col gap-3 text-white">
+            <li className="active border-b border-b-white border-t border-t-white w-20  text-center p-2 ">
+              <NavLink to="/">MAIN </NavLink>
+            </li>
+            <li>
+              <NavLink to="/gallery">GALLERY</NavLink>
+            </li>
+            <li>
+              <NavLink to="/projects">PROJECTS</NavLink>
+            </li>
+            <li>
+              <Link to="*">CERTIFICATIONS</Link>
+            </li>
+            <li>
+              <NavLink to="*">CONTACTS</NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
       {/* first-section */}
       <div className="first-section w-[100%] lg:w-[80%]  m-auto p-4  ">
         <div className="first-section-text flex flex-col md:flex-row lg:flex-row justify-between">

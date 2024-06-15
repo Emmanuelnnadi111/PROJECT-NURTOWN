@@ -3,6 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
 
+  
+
+    const openNav = () => {
+      document.querySelector(".mobile-navbar").classList.toggle("hidden");
+      // document.querySelector('.btn').classList.toggle('hidden')
+    };
+
    const navigate = useNavigate();
    const goBack = () => {
      navigate("/");
@@ -28,10 +35,9 @@ const Projects = () => {
           </div>
           {/* Navbar */}
           <nav className="">
-            <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
+            <ul className="hidden lg:flex justify-between ml-60  lg:w-[100%]  pr-[10rem] text-offWhite">
               <li
                 onClick={goBack}
-                className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 "
               >
                 <a href="">MAIN</a>
               </li>
@@ -48,32 +54,42 @@ const Projects = () => {
                 <a href="">CONTACTS</a>
               </li>
             </ul>
-            {/* Navbar mobile */}
-            <div className="mobile-navbar hidden rounded-3xl p-6 bg-bgFooter  lg:hidden">
-              <ul className="flex flex-col gap-3 text-white">
-                <li>
-                  <a href="">MAIN</a>
-                </li>
-                <li>
-                  <a href="">GALLERY</a>
-                </li>
-                <li>
-                  <a href="">PROJECTS</a>
-                </li>
-                <li>
-                  <a href="">CERTIFICATIONS</a>
-                </li>
-                <li>
-                  <a href="">CONTACTS</a>
-                </li>
-              </ul>
-            </div>
           </nav>
-          <button className="text-5xl  md:text-5xl lg:hidden">
-            <i class="bx bx-menu"></i>
-          </button>
+          <div className="">
+            <button
+              onClick={openNav}
+              className="text-5xl  btn items-end   md:text-5xl lg:hidden"
+            >
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
         </div>
       </header>
+      {/* Navbar mobile */}
+      <div className="">
+        <div className="mobile-navbar hidden relative left-32 md:left-[65%]  w-60 rounded-3xl p-6 bg-bgFooter  lg:hidden">
+          <ul className="flex flex-col gap-3 text-white">
+            <li
+              onClick={goBack}
+              className="active border-b border-b-white border-t border-t-white w-20  text-center p-2 "
+            >
+              <a href="">MAIN</a>
+            </li>
+            <li onClick={goGallry}>
+              <a href="">GALLERY</a>
+            </li>
+            <li>
+              <a href="">PROJECTS</a>
+            </li>
+            <li onClick={goCert}>
+              <a href="">CERTIFICATIONS</a>
+            </li>
+            <li onClick={goCert}>
+              <a href="">CONTACTS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <div className="header w-[90%] lg:w-[80%] m-auto">
         <h1 className="text-Grey text-5xl sm:text-7xl font-light">Our</h1>

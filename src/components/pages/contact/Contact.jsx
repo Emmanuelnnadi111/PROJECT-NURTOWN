@@ -8,7 +8,7 @@ const Contact = () => {
 
 
   const goBack = () => {
-    navigate(-1);
+    navigate('/');
   }
 
 
