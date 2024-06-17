@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Certification = () => {
   const navigate = useNavigate();
   const goBack = () => {
-      navigate(-1);
+      navigate('/');
   }
   return (
     <div className="flex flex-col items-center  w-auto h-auto justify-center">

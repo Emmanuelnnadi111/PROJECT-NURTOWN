@@ -1,64 +1,29 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import Header from "../../header/Header";
 
 const Projects = () => {
+  const openNav = () => {
+    document.querySelector(".mobile-navbar").classList.toggle("hidden");
+    // document.querySelector('.btn').classList.toggle('hidden')
+  };
+
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate("/");
+  };
+
+  const goGallry = () => {
+    navigate("/gallery");
+  };
+  const goCert = () => {
+    navigate("*");
+  };
+
   return (
     <div className="project-contain">
       {/* Nav-container */}
-
-      <header className="w-[100%] py-10 lg:w-[80%] m-auto p-4">
-        <div className="contain-nav flex justify-between">
-          <div className="logo">
-            <img src="./src/image/Group 11.png" alt="" className="w-30" />
-          </div>
-          {/* Navbar */}
-          <nav className="">
-            <ul className="hidden lg:flex justify-between  lg:w-[100%] space-x-10 pr-[10rem] text-offWhite">
-              <li className="active: border-b border-b-slate-900 border-t border-t-slate-900 w-20  text-center p-2 ">
-                <a href="">MAIN</a>
-              </li>
-              <li>
-                <a href="">GALLERY</a>
-              </li>
-              <li>
-                <a href="">PROJECTS</a>
-              </li>
-              <li>
-                <a href="">CERTIFICATIONS</a>
-              </li>
-              <li>
-                <a href="">CONTACTS</a>
-              </li>
-            </ul>
-            {/* Navbar mobile */}
-            <div className="mobile-navbar hidden rounded-3xl p-6 bg-bgFooter  lg:hidden">
-              <ul className="flex flex-col gap-3 text-white">
-                <li>
-                  <a href="">MAIN</a>
-                </li>
-                <li>
-                  <a href="">GALLERY</a>
-                </li>
-                <li>
-                  <a href="">PROJECTS</a>
-                </li>
-                <li>
-                  <a href="">CERTIFICATIONS</a>
-                </li>
-                <li>
-                  <a href="">CONTACTS</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <button className="text-5xl  md:text-5xl lg:hidden">
-            <i class="bx bx-menu"></i>
-          </button>
-        </div>
-      </header>
-
-
-
-
+      <Header />
 
       <div className="header w-[90%] lg:w-[80%] m-auto">
         <h1 className="text-Grey text-5xl sm:text-7xl font-light">Our</h1>
@@ -69,7 +34,7 @@ const Projects = () => {
       <div className="contain w-[90%] lg:w-[80%] m-auto  lg:py-20 bg-sectionBg ">
         <div className="first-section flex flex-col lg:flex-row lg:space-x-10">
           <div className="image w-[100%]">
-            <img src="./src/image/image 30.png" alt="" className="w-[100%]" />
+            <img src="./image/image 30.png" alt="" className="w-[100%]" />
           </div>
           <div className="first-section-text w-[100%] lg:w-[70%] lg:mt-10">
             <h2 className="text-Grey text-3xl sm:text-5xl font-light mt-4">
@@ -90,7 +55,7 @@ const Projects = () => {
       <div className="contain w-[90%] lg:w-[80%] m-auto  lg:py-20 bg-sectionBg ">
         <div className="first-section flex flex-col lg:flex-row lg:space-x-10">
           <div className="image w-[100%]">
-            <img src="./src/image/image 33.png" alt="" className="w-[100%]" />
+            <img src="./image/image 33.png" alt="" className="w-[100%]" />
           </div>
           <div className="first-section-text w-[100%] lg:w-[70%] lg:mt-10">
             <h2 className="text-Grey text-3xl sm:text-5xl font-light mt-5">
@@ -111,7 +76,7 @@ const Projects = () => {
       <div className="contain w-[90%] lg:w-[80%] m-auto  py-20 bg-sectionBg ">
         <div className="first-section flex flex-col lg:flex-row lg:space-x-10">
           <div className="image w-[100%]">
-            <img src="./src/image/image 32.png" alt="" className="w-[100%]" />
+            <img src="./image/image 32.png" alt="" className="w-[100%]" />
           </div>
           <div className="first-section-text w-[100%] lg:w-[70%] mt-10">
             <h2 className="text-Gray1 text-3xl sm:text-5xl font-light">
@@ -152,7 +117,7 @@ const Projects = () => {
       <footer className="bg-bgFooter  py-10">
         <div className="contain-footer p-4 w-[100%] lg:w-[80%] m-auto flex flex-col lg:flex-row justify-between  text-white">
           <div className="w-[30%] lg:w-[10%]">
-            <img src="./src/image/Group 11 1.png" alt="" className="w-[100%]" />
+            <img src="./image/Group 11 1.png" alt="" className="w-[100%]" />
           </div>
 
           <div className="text-info flex flex-col gap-5 mt-10">
@@ -199,6 +164,6 @@ const Projects = () => {
       </footer>
     </div>
   );
-}
+};
 
-export default Projects
+export default Projects;
